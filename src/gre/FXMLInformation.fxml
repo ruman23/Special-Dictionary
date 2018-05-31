@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="480.0" minWidth="640.0" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gre.FXMLInformationController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <ToolBar prefHeight="39.0" prefWidth="612.0" style="-fx-background-color: #595959;" GridPane.columnSpan="9" GridPane.valignment="TOP">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></ToolBar>
+      <Button fx:id="information" defaultButton="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#informationClick" prefHeight="26.0" prefWidth="213.0" stylesheets="@css_file.css" text="Information" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin></Button>
+      <Button fx:id="about" defaultButton="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#aboutClick" prefHeight="25.0" prefWidth="214.0" stylesheets="@css_file.css" text="About" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.columnSpan="3" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="dictionary" defaultButton="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#dictionaryClick" prefHeight="26.0" prefWidth="213.0" stylesheets="@css_file.css" text="Dictionary" textAlignment="CENTER" GridPane.columnSpan="3" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin></Button>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+      <ListView fx:id="list" prefHeight="440.0" prefWidth="197.0" stylesheets="@css_file.css" GridPane.columnSpan="2" GridPane.rowSpan="6">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="2.0" top="45.0" />
+         </GridPane.margin>
+      </ListView>
+      <TextArea fx:id="T10" prefHeight="404.0" prefWidth="485.0" style="-fx-background-insets: red;" wrapText="true" GridPane.columnIndex="2" GridPane.columnSpan="7" GridPane.rowSpan="6">
+         <GridPane.margin>
+            <Insets bottom="35.0" left="5.0" right="5.0" top="45.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextArea>
+      <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="78.0" prefWidth="485.0" style="-fx-background-color: #595959;" GridPane.columnIndex="2" GridPane.columnSpan="7" GridPane.rowIndex="5">
+        <items>
+            <Button fx:id="delete" alignment="CENTER" layoutX="10.0" layoutY="32.0" mnemonicParsing="false" onAction="#delete_action" prefHeight="30.0" prefWidth="155.0" text="DELETE" textFill="WHITE">
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+               <stylesheets>
+                  <URL value="@../../build/classes/gre/css_file.css" />
+                  <URL value="@css_file.css" />
+               </stylesheets>
+            </Button>
+            <Button fx:id="add" alignment="CENTER" contentDisplay="RIGHT" layoutX="66.0" layoutY="32.0" mnemonicParsing="false" onAction="#addinfo" prefHeight="30.0" prefWidth="155.0" text="ADD" textFill="WHITE">
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+               <stylesheets>
+                  <URL value="@../../build/classes/gre/css_file.css" />
+                  <URL value="@css_file.css" />
+               </stylesheets>
+            </Button>
+        </items>
+         <GridPane.margin>
+            <Insets left="5.0" top="40.0" />
+         </GridPane.margin>
+      </ToolBar>
+   </children>
+</GridPane>
